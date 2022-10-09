@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "COVID-19 Active Cases (10 Oct 2020)",
+    "width": 800,
+    "height": 400,
+    "projection": {"type": "mercator"},
+    "data": {
+      "url": "js/STE_2016_AUST.json",
+      "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.STE_NAME16",
+        "from": {
+          "data": {
+            "url": "data/Area.csv"
+          },
+          "key": "State",
+          "fields": ["Area"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape", "stroke": "black"},
+    "encoding": {
+      "color": {
+        "field": "Area",
+        "type": "quantitative",
+        "scale": {"type": "threshold",
+        "domain": [100, 150, 200, 250, 300, 350]}
+      },
+      "tooltip": [
+        {"field": "properties.STE_NAME16", "type": "nominal", "title": "Country"},
+        {"field": "Area", "type": "quantitative"}
+      ]
+    }
+  }
