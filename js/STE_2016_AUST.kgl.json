@@ -1,0 +1,177 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "ucl97f",
+          "type": "geojson",
+          "config": {
+            "dataId": "STE_2016_AUST.json",
+            "label": "new dataset",
+            "color": [
+              255,
+              203,
+              153
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": [
+                248,
+                149,
+                112
+              ],
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [
+                0,
+                10
+              ],
+              "radiusRange": [
+                0,
+                50
+              ],
+              "heightRange": [
+                0,
+                500
+              ],
+              "elevationScale": 5,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "STE_2016_AUST.json": [
+              {
+                "name": "STE_CODE16",
+                "format": null
+              },
+              {
+                "name": "STE_NAME16",
+                "format": null
+              },
+              {
+                "name": "AREASQKM16",
+                "format": null
+              }
+            ]
+          },
+          "compareMode": false,
+          "compareType": "absolute",
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        },
+        "geocoder": {
+          "enabled": false
+        },
+        "coordinate": {
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": [],
+      "animationConfig": {
+        "currentTime": null,
+        "speed": 1
+      }
+    },
+    "mapState": {
+      "bearing": 0,
+      "dragRotate": false,
+      "latitude": -24.355289943681434,
+      "longitude": 135.4015326057847,
+      "pitch": 0,
+      "zoom": 4.007689438952922,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "dark",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "border": true,
+        "building": true,
+        "label": true,
+        "land": true,
+        "road": true,
+        "water": true
+      },
+      "threeDBuildingColor": [
+        9.665468314072013,
+        17.18305478057247,
+        31.1442867897876
+      ],
+      "mapStyles": {}
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "COVID-19 Active Cases (10 Oct 2020)",
-    "width": 800,
+    "title": "The Plantation areas in Australia 2002 (’000 ha)",
+    "width": 950,
     "height": 400,
     "projection": {"type": "mercator"},
     "data": {
@@ -26,7 +26,7 @@
         "field": "Area",
         "type": "quantitative",
         "scale": {"type": "threshold",
-        "domain": [100, 150, 200, 250, 300, 350]}
+        "domain": [100, 150, 200, 250, 300, 350, 400, 450, 500]}
       },
       "tooltip": [
         {"field": "properties.STE_NAME16", "type": "nominal", "title": "Country"},
