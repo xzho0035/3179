@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "title": "The change of plantation areas in some states between 2002-2020 (’000 ha)",
+    "title": "The change of plantation areas in some states between 2002-2020",
     "autosize": "fit",
     "width": 950,
     "height": 400,
@@ -39,7 +39,7 @@
           "y": {
             "field": "Area",
             "type": "quantitative",
-            "title": "Plantation areas"
+            "title": "Plantation areas (’000 ha)"
           },
           "color": {
             "field": "Region",
