@@ -1,0 +1,111 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": "The change of plantation areas in some states between 2002-2020 (’000 ha)",
+    "autosize": "fit",
+    "width": 950,
+    "height": 400,
+    "data": {
+      "url": "data/3179V4.csv"
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "Region",
+          "oneOf": [
+            "Victoria",
+            "South Australia",
+            "Tasmania",
+            "Northern Territory"
+          ]
+        }
+      }
+    ],
+    "layer": [
+      {
+        "selection": {
+          "highlightState": {
+            "type": "multi",
+            "fields": ["Region"],
+            "bind": "legend"
+          }
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "State-Year",
+            "type": "nominal",
+            "axis": {"labelAngle": 45}
+          },
+          "y": {
+            "field": "Area",
+            "type": "quantitative",
+            "title": "Plantation areas"
+          },
+          "color": {
+            "field": "Region",
+            "type": "nominal",
+            "legend": {"orient": "left"},
+            "scale": {
+              "domain": [
+                "Victoria",
+                "South Australia",
+                "Tasmania",
+                "Northern Territory"
+              ],
+              "range": [
+                "#000000",
+                "#fc9272",
+                "slategray",
+                "#fb9a99"
+              ]
+            }
+          },
+          "tooltip": [
+            {"field": "State-Year", "type": "nominal", "title": "State-Year"},
+            {
+              "field": "Area",
+              "type": "quantitative",
+              "title": "Plantation areas",
+              "format": "1s"
+            }
+          ],
+          "opacity": {
+            "condition": {"selection": "highlightState", "value": 0.8},
+            "value": 0.2
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "line-top",
+          "dx": -15,
+          "dy": -15,
+          "fontSize": 8,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "x": {
+            "field": "State-Year",
+            "type": "nominal",
+            "axis": {"labelAngle": 30}
+          },
+          "y": {
+            "field": "Area",
+            "type": "quantitative"
+          },
+          "text": {"field": "Area", "type": "nominal", "format": "1s"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['State'] == 'Northern Territory' || datum['State'] =='Victoria' || datum['State'] == 'South Australia' || datum['State'] == 'Tasmania'",
+              "value": 1
+            },
+            "value": 1
+          }
+        }
+      }
+    ]
+  }
+  

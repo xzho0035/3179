@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>The Plantation areas in Australia</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -31,8 +31,8 @@
     <!-- pure grid group -->
 
     <div class="pure-u-1-1">
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1>The Plantation areas in Australia</h1>
+        <p></p>
     </div>
     <div id="AAAAA"></div>
     <!-- end pure grid group -->
@@ -42,10 +42,14 @@
 
     <div id="A2_2"></div>
 
+  </div> <!-- end page -->
+
+  <div id="A2_3"></div>
+
   <script type="text/javascript">
     var specVis1 = "js/A2_1.json";
     var specVis2 = "js/A2_3.json";
-
+    var specVis3 = "js/A2_4.json";
     
 
     vegaEmbed('#AAAAA', specVis1, { "actions": false }).then(function (result) {
@@ -56,7 +60,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
+    vegaEmbed('#A2_3', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
