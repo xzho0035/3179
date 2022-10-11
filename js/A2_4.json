@@ -39,7 +39,7 @@
           "y": {
             "field": "Area",
             "type": "quantitative",
-            "title": "Plantation areas (’000 ha)"
+            "title": "Plantation areas(’000 ha)"
           },
           "color": {
             "field": "Region",
