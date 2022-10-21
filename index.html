@@ -44,12 +44,15 @@
 
   </div> <!-- end page -->
 
-  <div id="A2_3"></div>
+  <div id="A2_"></div>
+
+  <div id="Forest_Type"></div>
 
   <script type="text/javascript">
     var specVis1 = "js/A2_1.json";
     var specVis2 = "js/A2_3.json";
-    var specVis3 = "js/A2_4.json";
+    var specVis3 = "js/map_filter.json";
+    var specVis4 = "js/A2_pie.json";
     
 
     vegaEmbed('#AAAAA', specVis1, { "actions": false }).then(function (result) {
@@ -60,7 +63,11 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#A2_3', specVis3, { "actions": false }).then(function (result) {
+    vegaEmbed('#A2_', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#Forest_Type', specVis4, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
