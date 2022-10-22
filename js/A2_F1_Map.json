@@ -26,8 +26,8 @@
         "field": "Forest Cover",
         "type": "quantitative",
         "scale": {"type": "threshold",
-          "range": ["#FFD700", "#FFFFF0", "#F0FFF0", "#90EE90", "#32CD32", "#2E8B57", "#006400"],
-        "domain": [0.00, 0.10, 0.20, 0.30 , 0.40, 0.50, 0.60]}
+          "range": [ "#FFFFF0", "#F0FFF0", "#90EE90", "#32CD32", "#2E8B57", "#006400"],
+        "domain": [0.10, 0.20, 0.30 , 0.40, 0.50, 0.60]}
       },
       "tooltip": [
         {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
