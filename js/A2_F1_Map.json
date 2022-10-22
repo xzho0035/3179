@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "The Plantation areas in Australia 2002 (’000 ha)",
+    "title": "The Forest Cover Ration in Australia 2021",
     "width": 950,
     "height": 400,
     "projection": {"type": "mercator"},
@@ -13,24 +13,25 @@
         "lookup": "properties.STE_NAME16",
         "from": {
           "data": {
-            "url": "data/Area.csv"
+            "url": "data/ForetCover.csv"
           },
           "key": "State",
-          "fields": ["Area"]
+          "fields": ["Forest Cover"]
         }
       }
     ],
     "mark": {"type": "geoshape", "stroke": "black"},
     "encoding": {
       "color": {
-        "field": "Area",
+        "field": "Forest Cover",
         "type": "quantitative",
         "scale": {"type": "threshold",
-        "domain": [100, 150, 200, 250, 300, 350, 400, 450, 500]}
+          "range": ["#FFD700", "#FFFFF0", "#F0FFF0", "#90EE90", "#32CD32", "#2E8B57", "#006400"],
+        "domain": [0.00, 0.10, 0.20, 0.30 , 0.40, 0.50, 0.60]}
       },
       "tooltip": [
-        {"field": "properties.STE_NAME16", "type": "nominal", "title": "Country"},
-        {"field": "Area", "type": "quantitative"}
+        {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
+        {"field": "Forest Cover", "type": "quantitative"}
       ]
     }
   }

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 950,
+  "height": 400,
+  "data": {
+    "url": "data/A2_filter.csv"
+  },
+
+  "params":[
+    {
+    "name": "State",
+    "bind":{
+      "input": "select",
+      "options":[null,
+      "New South Wales",
+      "Victoria",
+      "Western Australia"
+     ],
+      "labels": [
+      "Show All",
+      "New South Wales",
+      "Victoria",
+      "Western Australia"]}
+    }
+    ],
+  "transform": [{ "filter": "State == null || datum['State']  == State"}],
+  "layer":[{
+    
+    "mark": "bar",
+    "encoding": {
+    "x": {"field": "Year", "axis": {"labelAngle": 45}},
+    "y": {"field": "Area", "type": "quantitative"},
+    "xOffset": {"field": "State"},
+    "color": {
+      "field": "State",
+      "scale": {
+            "domain": [
+              "New South Wales",
+              "Victoria",
+              "Western Australia"
+            ],
+            "range": [
+              "#FFD700",
+              "#90EE90",
+              "#006400"
+            ]
+          }
+      },
+    
+    "tooltip": [
+          {"field": "Year", "type": "nominal", "title": "Year"},
+          {"field": "State", "type": "nominal", "title": "State"},
+          {
+            "field": "Area",
+            "type": "quantitative",
+            "title": "Plantation areas",
+            "format": ".1s"
+          }
+        ]
+  }
+
+  }
+  ]
+}

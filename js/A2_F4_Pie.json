@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 950,
+    "height": 400,
+    "data": {
+      "values": [
+        {"category": "Acacia", "Area": 10813},
+        {"category": "Melaleuca", "Area": 6382},
+        {"category": "Rainforest", "Area": 3581},
+        {"category": "Others", "Area": 9780},
+        {"category": "Eucalypt", "Area": 101058}
+      ]
+    },
+    "encoding": {
+      "theta": {"field": "Area", "type": "quantitative", "stack": true},
+      "radius": {"field": "Area", "scale": {"type": "sqrt", "zero": true, "rangeMin": 100}},
+      "color": {"field": "category", "type": "nominal", "legend": null},
+      "tooltip": [
+        {"field": "category", "type": "nominal", "title": "Forest Type"},
+        {"field": "Area", "type": "quantitative"}
+      ]
+      
+    },
+    "layer": [{
+      "mark": {"type": "arc","innerRadius": 50,"stroke": "#fff"}
+    }, {
+      "mark": {"type": "text", "radiusOffset": 30},
+      "encoding": {
+        "text": {"field": "category", "type": "nominal"}
+      }
+    }]
+  }
