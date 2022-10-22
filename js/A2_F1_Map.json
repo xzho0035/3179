@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "The Forest Cover Ration in Australia 2021",
-    "width": 950,
+    "title": "The Australia's Forest Cover Ratio in 2021",
+    "width": 600,
     "height": 400,
     "projection": {"type": "mercator"},
     "data": {

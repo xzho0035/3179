@@ -8,62 +8,250 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  #divide {
+     
+      background-color:#90EE90; 
+      height:10px; 
+      width: 1400px;
+      border: none;
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  }
 
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  .format1{
+      width: 1400px;
+      height: 700px;
+      text-align: center;
+      font-size: 1em;
+      color: #030007;
+      font-weight: lighter;
+      overflow: hidden;
+      margin: 0em auto;
+  }
 
+  .format1 #title1
+  {
+      text-align: center;
+      font-size: 3.5em;
+      color: #556B2F;
+      font-weight: lighter;
+  }
+
+  .format1 #content1 p
+  {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 8em;
+      margin-right: 50em;
+      color: #000000;
+      font-weight: lighter;
+  }
+
+  .format1 #AAAAA{
+    position: relative;
+    left: 20em;
+    bottom: 17em;
+      
+  }
+
+
+  .format2{
+      width: 1400px;
+      height: 800px;
+      text-align: center;
+      font-size: 1em;
+      color: #030007;
+      font-weight: lighter;
+      overflow: hidden;
+      margin: 0em auto;
+  }
+
+  .format2 #title2
+  {
+      text-align: center;
+      font-size: 3.5em;
+      color: #556B2F;
+      font-weight: lighter;
+  }
+
+  .format2 #content2 p
+  {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 1em;
+      color: #000000;
+      margin-left: 13em;
+      margin-right: 13em;
+      font-weight: lighter;
+  }
+
+  .format2 #A2_2{
+      text-align: center;
+      bottom: 0em;
+  }
+
+  .format4{
+      width: 1400px;
+      height: 700px;
+      text-align: center;
+      font-size: 1em;
+      color: #030007;
+      font-weight: lighter;
+      overflow: hidden;
+      margin: 0em auto;
+  }
+
+  .format4 #title4
+  {
+      text-align: center;
+      font-size: 3.5em;
+      color: #556B2F;
+      font-weight: lighter;
+  }
+
+  .format4 #content4 p
+  {
+      text-align: center;
+      font-size: 1em;
+      right: -6em;
+      width: 300px;
+      bottom: 30em;
+      margin-top: 8em;
+      margin-left: 60em;
+      color: #000000;
+      font-weight: lighter;
+  }
+
+  .format4 #Forest_Type{
+      text-align: left;
+      bottom: 25em;
+      margin-right: 30em;
+  }
+
+  .format3{
+      width: 1400px;
+      height: 800px;
+      text-align: center;
+      font-size: 1em;
+      color: #030007;
+      font-weight: lighter;
+      overflow: hidden;
+      margin: 0em auto;
+  }
+
+  .format3 #title3
+  {
+      text-align: center;
+      font-size: 3.5em;
+      color: #556B2F;
+      font-weight: lighter;
+  }
+
+  .format3 #content3 p
+  {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 1em;
+      color: #000000;
+      margin-left: 13em;
+      margin-right: 13em;
+      font-weight: lighter;
+  }
+
+  .format3 #A2_{
+      text-align: center;
+      bottom: 0em;
+  }
+  </style>
 
 </head>
-
-<div class = "intro">
-  <h1 style="text-align:center">Introduction</h1>
-  <div id ="part">  
-      <p>
-         This visualization focuses on the Global Economy. The main points of it are the GDP and GDP Per Capita of each country. And shows different perspectives of these main points by the following diagrams and maps.
-      </p>
-  </div>
-</div>
-
-<body>
-
-  <div class="page">
-
-    <!-- pure grid group -->
-
-    <div class="pure-u-1-1">
-        <h1>The Plantation areas in Australia</h1>
-        <p></p>
+<body style="background-color:#FFFFF0;">
+  <div class = "intro">
+    <h1 style="text-align:center; color: #556B2F; font-size:4em;">The Plantation areas in Australia</h1>
+    <div id ="part">  
+        <p style="text-align:center; color: #556B2F;margin-left: 13em;margin-right: 13em;">
+          This visualization is developed by Xin Zhou, 29634229.
+        </p>
     </div>
-    <div id="AAAAA"></div>
-    <!-- end pure grid group -->
+  </div>
+  <hr id="divide"/>
 
+  <div class = "format1">
+    <h1 id = "title1">What is the current distribution of forest cover in Australia?</h1>
+    <div id ="content1">  
+      
+        <p>
+            This map indicates the forest cover ratio in Australia. The forest cover ratio is the land amount that is covered by forest.
+            Based on the map shown right-hand side, we can find that Tasmania has the highest forest cover ratio,
+        </p>
+        <p style="color: #32CD32 ">
+          Based on the map shown right-hand side, we can find that <b>Tasmania</b> has the <b>highest</b> forest cover ratio, <b>0.6</b>. And South Australia has the <b>lowest</b> forest cover ratio.
+        </p>
+        <article id="AAAAA"></article>
+    </div>
+  </div>
 
-  </div> <!-- end page -->
+  <br>
+  <hr id="divide"/>
 
-    <div id="A2_2"></div>
+  <div class = "format2">
+    <h1 id = "title2">What is the changes in forest area in Australia?</h1>
+    <div id ="content2">  
+      <article id="A2_2"></article>
+        <p>
+           This bar chart is used to show the changes of forest area in the three states with the highest forest areas from 2002 to 2020.
+        </p>
+        <p style="color: #32CD32; ">
+          
+           Based on the information shown above, we can find that <b>between 2002 and 2014</b>, the <b>total forest area </b>in Western Australia, New South Wales and Victoria has <b>INCREASWS</b>. However, <b>from 2014 to 2020</b>, the forest area in these states <b>declined</b>. 
+          
+        </p>
+    </div>
+  </div>
 
-  </div> <!-- end page -->
+  <br>
+  <hr id="divide"/>
 
-  <div id="A2_"></div>
+  <div class = "format3">
+    <h1 id = "title3">How much the forest area in each state?</h1>
+    <div id ="content3">  
+     
+        <p>
+            This bar chart is used to show the forest area for each state in 2021.
+        </p>
+        <p style="color: #32CD32 ">
+          Based on the information shown above, we can find that <b>New South Wales</b>, <b>Victoria</b> and <b>Western Australia</b> are still the three states with the <b>MOST</b> forested areas in <b>2021</b>.
+           
+          
+        </p>
+        <article id="A2_"></article>
+    </div>
+  </div>
 
-  <div id="Forest_Type"></div>
+  <hr id="divide"/>
+
+  <div class = "format4">
+    <h1 id = "title4">Tree species in the Australian forests</h1>
+    <div id ="content4">  
+      
+        <p>
+            This pie chart shows the different tree species in Australian forests.
+        </p>
+        <p style="color: #32CD32 ">
+            Based on the information shown on the left, we can see that <b>Eucalypt</b> is the <b>most abundant</b> tree species in Australian forests, which reaching <b>3/4</b> of the total.
+        </p>
+        <article id="Forest_Type"></article>
+    </div>
+    
+  </div>
+
 
   <script type="text/javascript">
     var specVis1 = "js/A2_F1_Map.json";
     var specVis2 = "js/A2_F2_Bar_Filter.json";
     var specVis3 = "js/A2_F3_BarChart.json";
     var specVis4 = "js/A2_F4_Pie.json";
-    
-
+  
     vegaEmbed('#AAAAA', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
@@ -79,6 +267,7 @@
     vegaEmbed('#Forest_Type', specVis4, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+
   </script>
 </body>
 

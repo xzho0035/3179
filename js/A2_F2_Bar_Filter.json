@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 950,
   "height": 400,
+  "title": "The changes in forest area in the top three states in terms of forest area",
   "data": {
     "url": "data/A2_filter.csv"
   },
@@ -53,8 +54,7 @@
           {
             "field": "Area",
             "type": "quantitative",
-            "title": "Plantation areas",
-            "format": ".1s"
+            "title": "Plantation areas"
           }
         ]
   }

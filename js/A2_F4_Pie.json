@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 950,
+    "width": 600,
     "height": 400,
+    "title": "The types of trees in Australian forests in 2021",
     "data": {
       "values": [
         {"category": "Acacia", "Area": 10813},

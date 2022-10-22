@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "title": "The change of plantation areas in some states between 2002-2020",
+    "title": "The forest area by state in Australia 2021",
     "autosize": "fit",
     "width": 950,
     "height": 400,
